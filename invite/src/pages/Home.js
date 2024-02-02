@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 import { Container } from '../components/Container'
-import { Animation } from "../components/Animation";
+// import { Animation } from "../components/Animation";
 import location from "../assets/pin.png";
+import logo from "../assets/logo.png";
 import check from "../assets/check.png";
 import gift from "../assets/gift.png";
 import { Button } from '../components/Button';
@@ -13,26 +14,59 @@ import { useEffect } from 'react';
 
 const Main = styled.main`
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
+    gap: 30px;
     position: relative;
     z-index: 1;
+    >img{
+      width: 40%;
+      max-width: 170px;
+      border-radius: 50%;
+    }
     h1{
       width: 80%;
-      font-size: min(10vw, 40px);
+      font-size: min(10vw, 36px);
     }
     h2{
       display: flex;
       justify-content: center;
+      align-items: center;
       font-size: min(5.8vw, 26px);
-    }
-
-    .title{
-      p{
-        text-transform: uppercase;
-        font-size: 16px;
+      span{
+        font-size: 14px;
       }
     }
+
+    >p{
+      width: 70%;
+      font-size: 20px;
+    }
+
+    /* border: 1px solid red; */
+    .title{
+      height: 14%;
+      max-height: 90px;
+      justify-content: space-between;
+      p{
+        text-transform: uppercase;
+        font-size: 18px;
+      }
+    }
+    .day{
+        >div{
+          width: 100%;
+          display: flex;
+          flex-wrap: nowrap;
+          align-items: center;
+          span{
+            /* border: 1px solid red; */
+            width: 50%;
+            height: 1px;
+            background-color: rgb(204, 93, 39);
+          }
+        }
+      }
 `
 
 
@@ -59,19 +93,27 @@ export const Home = () => {
   return(
     <Container>
       <Main>
-        <Animation width={300} height={300}/>
+        <img src={logo}/>
         <div className="title">
-          <h1>Laiane &nbsp; & &nbsp; Leonardo</h1>
-          {/* <p>com amor, convidam para seu casamento</p> */}
-          <p>Contagem regressiva para o grande dia!</p>
+          <p>Com a benção de Deus e de seus pais</p>
+          <h1>Bruna &nbsp; e &nbsp; Erivonaldo</h1>
         </div>
-        <h2>
-          06 &nbsp;| &nbsp;JANEIRO&nbsp; | &nbsp;2024&nbsp; |&nbsp; 16H
-        </h2>
+        <p>Convidam para sua cerimônia de casamento que será realizada</p>
+        <div className="day">
+          <div>
+            <span></span>
+            <p>Sábado, às 16h</p>
+            <span></span>
+          </div>
+          <h2>
+            22 &nbsp; <span>&hearts;</span> &nbsp;JUNHO&nbsp; <span>&hearts;</span> &nbsp;2024&nbsp;
+          </h2>
+        </div>
+        <p>Clique nos ícones abaixo:</p>
         <div className="icons">
           <Button onClick={() => goToLocation(navigate, name)} img={location} text={"Local"}/>
           <Button onClick={() => goToGift(navigate, name)} img={gift} text={"Presentes"}/>
-          {/* <Button onClick={() => goToCheck(navigate, name)} img={check} text={"Confirmação de presença"}/> */}
+          <Button onClick={() => goToCheck(navigate, name)} img={check} text={"Confirmação de presença"}/>
         </div>
       </Main>
     </Container>

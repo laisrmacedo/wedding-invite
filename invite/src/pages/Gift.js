@@ -2,6 +2,9 @@ import styled from 'styled-components'
 import { Container } from '../components/Container'
 import { Header } from '../components/Header'
 import whatsapp from '../assets/whatsapp.png'
+import bule from '../assets/bule.png'
+import presente from '../assets/presente.png'
+import { WppBtn } from '../components/WppBtn'
 
 const Main = styled.main`
     flex-direction: column;
@@ -44,21 +47,19 @@ const Main = styled.main`
 export const Gift = () => {
   return(
     <Container>
-      {/* link : https://goo.gl/maps/q5gau8ej3HoRxxwW9 */}
       <Main>
         <Header showBtn={true}/>
         <div>
           <h1>Sobre Presentes</h1>
-          <p>Pensando na praticidade e conveniência, gostaríamos de sugerir que o envio de presentes seja em forma de <strong>transferência via Pix</strong>. Essa opção facilitará o processo para todos e nos permitirá utilizar seu presente de maneira significativa em nossa nova vida juntos, já que estamos nos mudando para Guarulhos-SP.</p>
-          <p>Queremos enfatizar que valorizamos sua presença e apoio acima de qualquer presente material.</p>
-          <p style={{fontStyle: 'italic'}}>Com amor, Leonardo e Laiane.</p>
+          <p>Para nos presentear, você pode escolher qualquer item das seguintes listas:</p>
           <span>
-            <p>CHAVE PIX:</p>
-            <h3>lairmacedo@outlook.com</h3>
-            <p>Laiane Rodrigues Macedo </p>
+            <a className="btn listBtn" href='https://www.querodecasamento.com.br/lista-de-casamento/bruna--erivonaldo' target='_blank'><img src={bule}/><h3>CHÁ DE COZINHA</h3></a>
+            <a className="btn listBtn" href='https://www.amazon.com.br/hz/wishlist/ls/3U1M9XRUA2T9G?ref_=wl_share' target='_blank'><img src={presente}/><h3>LISTA DE PRESENTES</h3></a>
           </span>
-          <a className="btn wppBtn" href='https://wa.me/+558796267434' target='_blank'><img src={whatsapp}/> Mais Informações</a>
-        </div>
+          <p>Fique à vontade!</p>
+          <p>Aguardamos você no nosso grande dia.</p>
+          <WppBtn/>
+         </div>
       </Main>
     </Container>
   )

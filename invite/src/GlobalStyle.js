@@ -5,8 +5,8 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* color: #7B5E5A; */
-    color: #492203;
+    color: rgb(204, 93, 39);
+    /* color: #492203; */
     text-align: center;
     overflow: hidden;
 
@@ -33,18 +33,17 @@ export const GlobalStyle = createGlobalStyle`
     /* border: 1px solid #7B5E5A; */
     width: 100%;
     max-width: 420px;
-    height: 83vh;
+    height: 100vh;
     -webkit-backdrop-filter: blur(3px);
-    backdrop-filter: blur(8px);
-    /* background-color: rgb(231, 213, 194, .4); */
-    background-color: rgb(217, 220, 217, .5);
+    /* backdrop-filter: blur(8px); */
+    /* background-color: rgb(254, 249, 243); */
     min-height: 550px;
   }
 
 h1{
   /* text-transform: uppercase; */
   font-weight: 200;
-  font-family: 'Rouge Script', cursive;
+  font-family: 'Italiana', sans-serif;
   /* font-family: 'Great Vibes', cursive; */
 }
 
@@ -73,7 +72,8 @@ p{
   justify-content: center;
   align-items: center;
   gap: 8px;
-  background: #D4D1D0;
+  /* background: #D4D1D0; */
+  background-color: rgb(254, 249, 243);
   border-radius: 8px;
   border: none;
   margin: 10px;
@@ -92,7 +92,17 @@ p{
 
   img{
     height: 100%;
-    filter: brightness(0.3);
+  }
+}
+
+.listBtn{
+  width: 280px;
+  height: 60px;
+  padding: 8px 20px;
+
+  img{
+    height: 80%;
+    margin-right: 10px;
   }
 }
 

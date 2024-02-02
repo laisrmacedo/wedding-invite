@@ -1,6 +1,7 @@
 import styled from 'styled-components'
-import { Animation } from './Animation'
+// import { Animation } from './Animation'
 import { goToHome } from '../router/coordinator';
+import logo from "../assets/logo.png";
 import { useNavigate, useParams } from 'react-router-dom';
 
 const Content = styled.header`
@@ -31,7 +32,7 @@ const Content = styled.header`
   }
   
   img{
-    height: 28px;
+    height: 40px;
     opacity: 1;
 
   }
@@ -43,8 +44,9 @@ export const Header = (props) => {
   return(
     <Content>
       <div>
-        <Animation width={40} height={40}/>
-        <h1>Laiane & Leonardo</h1>
+        <img src={logo}/>
+        {/* <Animation width={40} height={40}/> */}
+        <h1>Bruna e Erivonaldo</h1>
       </div>
       {props.showBtn? 
         <button className="btn checkBtn" onClick={() => goToHome(navigate, name, n)}>&#5130; &nbsp;Voltar</button>

@@ -2,12 +2,12 @@ import { Container } from "../components/Container"
 import styled from 'styled-components'
 import { Header } from "../components/Header"
 import { useParams } from "react-router-dom"
-import whatsapp from '../assets/whatsapp.png'
 import { useEffect, useState } from "react"
 import { Form } from "../components/Form"
 import axios from "axios"
 import { BASE_URL } from "../App"
 import { LoadingAnimation } from "../components/LoadingAnimation"
+import { WppBtn } from "../components/WppBtn"
 
 const Main = styled.main`
   flex-direction: column;
@@ -126,7 +126,7 @@ export const Presence = () => {
             </span>
           </>
         }
-        <a className="btn wppBtn" href='https://wa.me/+558796267434' target='_blank'><img src={whatsapp}/> Mais Informações</a>
+        <WppBtn/>
       </Main>
     </Container>
   )

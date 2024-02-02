@@ -68,11 +68,11 @@ const Container = styled.div`
     top: 3px;
     left: 10px;
     font-size: 10px;
-    background: #D3D2D2;
+    background-color: rgb(254, 249, 243);
     padding: 0 4px;
   }
   input{
-    border: 1px solid #88593C;
+    border: 1px solid #B93112;
     height: 28px;
     width: 100%;
     background: transparent;
@@ -80,6 +80,9 @@ const Container = styled.div`
     border-radius: 4px;
     padding: 4px 10px;
     outline: none;
+    &::placeholder {
+    color: #B9311270;
+  }
   }
   button{
     padding: 4px;
@@ -89,10 +92,11 @@ const Container = styled.div`
     margin: 14px 0 0 0;
   }
   .cancel{
-    background: #f2f2f2;
+    background: #fff;
+    border: 1px solid #B93112;
   }
   .confirm{
-    color: #f2f2f2;
+    color: #fff;
     background: ${(props) => props.response? '#56764C' : '#B93112'};
   }
 `
