@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { Container } from '../components/Container'
-// import { Animation } from "../components/Animation";
 import location from "../assets/pin.png";
 import logo from "../assets/logo.png";
 import check from "../assets/check.png";
@@ -13,72 +12,67 @@ import axios from 'axios';
 import { useEffect } from 'react';
 
 const Main = styled.main`
-    flex-direction: column;
-    justify-content: start;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 1;
+  >img{
+    width: clamp(120px, 50%, 170px);
+  }
+  h1{
+    font-size: min(10vw, 36px);
+  }
+  h2{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    position: relative;
-    z-index: 1;
-    >img{
-      width: 40%;
-      max-width: 170px;
-      border-radius: 50%;
+    font-size: min(5.8vw, 26px);
+    span{
+      font-size: 14px;
     }
-    h1{
-      width: 80%;
-      font-size: min(10vw, 36px);
+  }
+  >p{
+    width: 75%;
+    font-size: 20px;
+  }
+
+  .title{
+    height: 14%;
+    max-height: 90px;
+    justify-content: space-between;
+    p{
+      text-transform: uppercase;
+      font-size: 18px;
     }
-    h2{
+  }
+  .day{
+    width: 65%;
+    >div{
+      width: 100%;
       display: flex;
-      justify-content: center;
+      flex-wrap: nowrap;
       align-items: center;
-      font-size: min(5.8vw, 26px);
       span{
-        font-size: 14px;
+        width: 50%;
+        height: 1px;
+        background-color: rgb(204, 93, 39);
       }
     }
-
-    >p{
-      width: 70%;
-      font-size: 20px;
-    }
-
-    /* border: 1px solid red; */
-    .title{
-      height: 14%;
-      max-height: 90px;
-      justify-content: space-between;
-      p{
-        text-transform: uppercase;
-        font-size: 18px;
-      }
-    }
-    .day{
-        >div{
-          width: 100%;
-          display: flex;
-          flex-wrap: nowrap;
-          align-items: center;
-          span{
-            /* border: 1px solid red; */
-            width: 50%;
-            height: 1px;
-            background-color: rgb(204, 93, 39);
-          }
-        }
-      }
+  }
 `
 
 
 export const Home = () => {
   const navigate = useNavigate()
-  const {name} = useParams()
+  const { name } = useParams()
 
   const getGuests = async () => {
     try {
       const response = await axios.get(BASE_URL + `guests/`)
       const [foundGuest] = response.data.filter((guest) => guest.id === name)
-      if(!foundGuest){
+      if (!foundGuest) {
         goToError(navigate)
       }
     } catch (error) {
@@ -90,13 +84,13 @@ export const Home = () => {
     getGuests()
   }, [])
 
-  return(
+  return (
     <Container>
       <Main>
-        <img src={logo}/>
+        <img src={logo} />
         <div className="title">
           <p>Com a benção de Deus e de seus pais</p>
-          <h1>Bruna &nbsp; e &nbsp; Erivonaldo</h1>
+          <h1>Bruna e Erivonaldo</h1>
         </div>
         <p>Convidam para sua cerimônia de casamento que será realizada</p>
         <div className="day">
@@ -111,9 +105,9 @@ export const Home = () => {
         </div>
         <p>Clique nos ícones abaixo:</p>
         <div className="icons">
-          <Button onClick={() => goToLocation(navigate, name)} img={location} text={"Local"}/>
-          <Button onClick={() => goToGift(navigate, name)} img={gift} text={"Presentes"}/>
-          <Button onClick={() => goToCheck(navigate, name)} img={check} text={"Confirmação de presença"}/>
+          <Button onClick={() => goToLocation(navigate, name)} img={location} text={"Local"} />
+          <Button onClick={() => goToGift(navigate, name)} img={gift} text={"Presentes"} />
+          <Button onClick={() => goToCheck(navigate, name)} img={check} text={"Confirmação de presença"} />
         </div>
       </Main>
     </Container>
