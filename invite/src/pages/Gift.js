@@ -7,29 +7,29 @@ import presente from '../assets/presente.png'
 import { WppBtn } from '../components/WppBtn'
 
 const Main = styled.main`
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding-bottom: 40px; 
+  position: relative;
+  z-index: 1;
+  p{
+    font-size: 16px;
+  }
+  >div{
+    display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
     align-items: center;
-    padding-bottom: 40px; 
-    position: relative;
-    z-index: 1;
-    p{
-      font-size: 16px;
+    width: 100%;
+    height: 100%;
+    h1{
+      font-size: 28px;
     }
-    >div{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      height: 100%;
-      h1{
-        font-size: 28px;
-      }
-      h3{
-        font-size: 20px;
-      }
-      span{
+    h3{
+      font-size: 20px;
+    }
+    span{
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -41,7 +41,7 @@ const Main = styled.main`
         font-size: 20px;
       }
     }
-    }
+  }
 `
 
 export const Gift = () => {
