@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Container } from "../components/Container"
-import whatsapp from '../assets/whatsapp.png'
+import { WppBtn } from '../components/WppBtn'
 
 const Main = styled.main`
   flex-direction: column;
@@ -15,7 +15,7 @@ export const Error = () => {
       <Main>
         <h3>OPS!</h3>
         <p>Algo está errado.</p>
-        <a className="btn wppBtn" href='https://wa.me/+558796267434' target='_blank'><img src={whatsapp}/> Mais Informações</a>
+        <WppBtn/>  
       </Main>
     </Container>
   )
