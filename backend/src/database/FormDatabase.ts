@@ -45,20 +45,20 @@ export class BaseDatabase {
   });
 
   // Função para criar a tabela a partir do arquivo 'form.db'
-  public async createFormTable(): Promise<void> {
-    try {
-      const tableExists = await BaseDatabase.connection.schema.hasTable('form');
+  // public async createFormTable(): Promise<void> {
+  //   try {
+  //     const tableExists = await BaseDatabase.connection.schema.hasTable('form');
       
-      if (!tableExists) {
-        const filePath = path.join(__dirname, 'form.sql'); // Caminho completo para o arquivo
-        const sql = fs.readFileSync(filePath, 'utf-8'); // Ler o conteúdo do arquivo
-        await BaseDatabase.connection.raw(sql); // Executar o SQL para criar a tabela
-        console.log('Tabela "form" criada com sucesso.');
-      }
-    } catch (error) {
-      console.error('Erro ao criar/verificar a tabela "form":', error);
-    }
-  }
+  //     if (!tableExists) {
+  //       const filePath = path.join(__dirname, 'form.sql'); // Caminho completo para o arquivo
+  //       const sql = fs.readFileSync(filePath, 'utf-8'); // Ler o conteúdo do arquivo
+  //       await BaseDatabase.connection.raw(sql); // Executar o SQL para criar a tabela
+  //       console.log('Tabela "form" criada com sucesso.');
+  //     }
+  //   } catch (error) {
+  //     console.error('Erro ao criar/verificar a tabela "form":', error);
+  //   }
+  // }
 }
 
 
@@ -78,7 +78,7 @@ export class FormDatabase extends BaseDatabase{
 
   //methods
   public async getGuests(){
-    await this.createFormTable()
+    // await this.createFormTable()
 
     const guestDB = await BaseDatabase
       .connection(FormDatabase.TABLE_GUESTS)
