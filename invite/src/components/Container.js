@@ -12,7 +12,7 @@ const Content = styled.div`
   background: rgb(189, 176, 161);
 
   .transition{
-    opacity: ${(props) => props.loaded? 1 : 0}; 
+    opacity: ${(props) => props.loaded === 1? 1 : 0}; 
     transition: opacity 2s ease-in-out;
   }
   .index-0{
@@ -34,6 +34,7 @@ const Content = styled.div`
     height: 100%;
     width: 100%;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
   .index-2{
     background-color: rgb(254, 249, 243);
@@ -53,7 +54,7 @@ export const Container = (props) => {
   useEffect(() => isLoaded(true), [])
 
   return(
-    <Content loaded={loaded}>
+    <Content loaded={loaded? 1:0}>
       <div className='index-0 transition'>
         <img src={background}/>
       </div>

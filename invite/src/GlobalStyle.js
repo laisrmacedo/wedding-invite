@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
     width: 100%;
     max-width: 420px;
-    -webkit-backdrop-filter: blur(3px);
+    /* -webkit-backdrop-filter: blur(3px); */
     min-height: 550px;
     height: calc(100vh - 40px);
   }
