@@ -8,6 +8,7 @@ import axios from "axios"
 import { BASE_URL } from "../App"
 import { LoadingAnimation } from "../components/LoadingAnimation"
 import { WppBtn } from "../components/WppBtn"
+import { Footer } from "../components/Footer"
 
 const Main = styled.main`
   flex-direction: column;
@@ -125,6 +126,7 @@ export const Presence = () => {
         }
         <WppBtn/>
       </Main>
+      <Footer/>
     </Container>
   )
 }

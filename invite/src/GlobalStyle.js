@@ -6,7 +6,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     color: rgb(204, 93, 39);
-    /* color: #492203; */
     text-align: center;
     overflow: hidden;
 
@@ -30,21 +29,16 @@ export const GlobalStyle = createGlobalStyle`
 
   main{
     display: flex;
-    /* border: 1px solid #7B5E5A; */
     width: 100%;
     max-width: 420px;
-    height: 100vh;
     -webkit-backdrop-filter: blur(3px);
-    /* backdrop-filter: blur(8px); */
-    /* background-color: rgb(254, 249, 243); */
     min-height: 550px;
+    height: calc(100vh - 40px);
   }
 
 h1{
-  /* text-transform: uppercase; */
   font-weight: 200;
   font-family: 'Italiana', sans-serif;
-  /* font-family: 'Great Vibes', cursive; */
 }
 
 h2{
@@ -52,7 +46,6 @@ h2{
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  /* width: 70%; */
   font-family: 'Dosis', sans-serif;
 }
 h3{
@@ -72,7 +65,6 @@ p{
   justify-content: center;
   align-items: center;
   gap: 8px;
-  /* background: #D4D1D0; */
   background-color: rgb(254, 249, 243);
   border-radius: 8px;
   border: none;
@@ -117,7 +109,6 @@ p{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
 }
 
 #animation-container{

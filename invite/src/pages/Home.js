@@ -10,6 +10,7 @@ import { goToCheck, goToError, goToGift, goToLocation } from '../router/coordina
 import { BASE_URL } from '../App';
 import axios from 'axios';
 import { useEffect } from 'react';
+import { Footer } from '../components/Footer';
 
 const Main = styled.main`
   flex-direction: column;
@@ -110,6 +111,7 @@ export const Home = () => {
           <Button onClick={() => goToCheck(navigate, name)} img={check} text={"Confirmação de presença"} />
         </div>
       </Main>
+      <Footer/>
     </Container>
   )
 }

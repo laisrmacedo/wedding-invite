@@ -42,7 +42,9 @@ const Content = styled.div`
     min-width: 350px;
     width: 40%;
     display: flex;
-    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 `
 

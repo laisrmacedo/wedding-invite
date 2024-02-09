@@ -5,6 +5,7 @@ import whatsapp from '../assets/whatsapp.png'
 import bule from '../assets/bule.png'
 import presente from '../assets/presente.png'
 import { WppBtn } from '../components/WppBtn'
+import { Footer } from '../components/Footer'
 
 const Main = styled.main`
   flex-direction: column;
@@ -61,6 +62,7 @@ export const Gift = () => {
           <WppBtn/>
          </div>
       </Main>
+      <Footer/>
     </Container>
   )
 }
