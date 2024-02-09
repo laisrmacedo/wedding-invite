@@ -26,8 +26,8 @@ export class FormBusiness{
   public inserGuest = async (input: InsertGuestOutputDTO): Promise <void> => {
     const {id, tickets} = input
 
-    if (id.length < 3) {
-      throw new BadRequestError("ERROR: 'id' must be at least 3 characters.")
+    if (id.length < 2) {
+      throw new BadRequestError("ERROR: 'id' must be at least 2 characters.")
     }
   
     if (tickets < 1) {
