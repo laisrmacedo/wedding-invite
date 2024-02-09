@@ -143,17 +143,18 @@ export const NewGuest = () => {
   }
 
   useEffect(() => {
+    if(form.guest.length >= 2){
+      setDisabledAddBtn(false) 
+      setDisabledDeleteBtn(true)
+    }else{
+      setDisabledAddBtn(true) 
+      setDisabledDeleteBtn(true)
+    }
     for (const item of allGuests) {
       if(item.id === (form.guest.toLocaleLowerCase().trim().replace(/ /g, "-"))){
         setDisabledAddBtn(true) 
         setDisabledDeleteBtn(false)
         break
-      }else if(form.guest.length >= 2){
-        setDisabledAddBtn(false) 
-        setDisabledDeleteBtn(true)
-      }else{
-        setDisabledAddBtn(true) 
-        setDisabledDeleteBtn(true)
       }
     }
     setError(null)
