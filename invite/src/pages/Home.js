@@ -19,6 +19,9 @@ const Main = styled.main`
   gap: 30px;
   position: relative;
   z-index: 1;
+  @media only screen and (max-width: 600px) {
+    max-height: 66vh;
+  }
   >img{
     width: clamp(120px, 50%, 170px);
   }
@@ -36,7 +39,7 @@ const Main = styled.main`
   }
   >p{
     width: 75%;
-    font-size: 20px;
+    font-size: clamp(16px, 2vw, 20px);
   }
 
   .title{

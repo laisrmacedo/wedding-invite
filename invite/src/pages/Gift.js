@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { Container } from '../components/Container'
 import { Header } from '../components/Header'
-import whatsapp from '../assets/whatsapp.png'
 import bule from '../assets/bule.png'
 import presente from '../assets/presente.png'
 import { WppBtn } from '../components/WppBtn'
@@ -14,8 +13,11 @@ const Main = styled.main`
   padding-bottom: 40px; 
   position: relative;
   z-index: 1;
+  @media only screen and (max-width: 600px) {
+    max-height: 66vh;
+  }
   p{
-    font-size: 16px;
+    font-size: clamp(16px, 2vw, 20px);
   }
   >div{
     display: flex;

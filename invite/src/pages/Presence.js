@@ -17,6 +17,9 @@ const Main = styled.main`
   padding-bottom: 10px; 
   position: relative;
   z-index: 1;
+  @media only screen and (max-width: 600px) {
+    max-height: 66vh;
+  }
   .subtitle{
     display: flex;
     flex-direction: column;
@@ -100,7 +103,7 @@ export const Presence = () => {
         <h1>Confirme sua Presença</h1>
         <div className="subtitle">
           <p>Sua presença é essencial para tornar nosso casamento ainda mais <i>especial</i> e <i>memorável</i>.</p>
-          <p>Por favor, confirme sua presença até &nbsp;<strong>( DATA )</strong>&nbsp; para que possamos organizar todos os preparativos com carinho e atenção aos detalhes. </p> 
+          <p>Por favor, confirme sua presença até &nbsp;<strong>01/05/2024</strong>&nbsp; para que possamos organizar todos os preparativos com carinho e atenção aos detalhes. </p> 
         </div>
         {loading? 
           <span className="visible">
