@@ -34,7 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     min-height: 550px;
     height: calc(100vh - 40px);
     @media only screen and (max-width: 600px) {
-      max-height: 70vh;
+      max-height: 80vh;
     }
   }
 
