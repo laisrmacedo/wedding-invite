@@ -1,30 +1,39 @@
 import styled from 'styled-components'
+import logoLandingPage from '../assets/logo-landing-page.png'
 
 const Content = styled.footer`
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: end;
+  align-items: center;
   width: 100%;
-  height: 40px;
+  height: 50px;
+  position: relative;
   /* border: 1px solid red; */
-  /* position: absolute;
-  z-index: 3;
-  margin-bottom: 20px; */
+  padding-bottom: 10px;
   p{
-    font-size: 8px;
+    font-size: 9px;
   }
-  span{
-    font-size: 11px;
-    font-family: 'Mali', cursive;
-    font-variant: all-small-caps;
+  a{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 16px;
+    :hover{
+      opacity: 0.5;
+    }
   }
-
+  img{
+    height: 100%;
+    filter: sepia(1);
+  }
 `
 
 export const Footer = () => {
   return(
     <Content>
-      <a><span>Convites personalizados</span></a>
+      <a href='https://laisrmacedo.github.io/convitespersonalizados/' target='_blank'><img src={logoLandingPage}/></a>
       <p>© 2023 &nbsp; Todos os direitos reservados.</p>
     </Content>
   )
