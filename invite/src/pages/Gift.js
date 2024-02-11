@@ -13,9 +13,7 @@ const Main = styled.main`
   padding-bottom: 40px; 
   position: relative;
   z-index: 1;
-  @media only screen and (max-width: 600px) {
-    max-height: 66vh;
-  }
+
   p{
     font-size: clamp(16px, 2vw, 20px);
   }
