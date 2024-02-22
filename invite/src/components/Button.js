@@ -9,7 +9,7 @@ const Span = styled.span`
   cursor: pointer;
 
   img{
-    height: 32px;
+    height: 30px;
     opacity: .7;
   }
   p{

@@ -52,9 +52,9 @@ export const Gift = () => {
         <Header showBtn={true}/>
         <div>
           <h1>Sobre Presentes</h1>
-          <p>Para nos presentear, você pode escolher qualquer item das seguintes listas:</p>
+          <p>Para nos presentear, você pode escolher qualquer item da seguinte lista:</p>
           <span>
-            <a className="btn listBtn" href='https://www.querodecasamento.com.br/lista-de-casamento/bruna--erivonaldo' target='_blank'><img src={bule}/><h3>CHÁ DE COZINHA</h3></a>
+            {/* <a className="btn listBtn" href='https://www.querodecasamento.com.br/lista-de-casamento/bruna--erivonaldo' target='_blank'><img src={bule}/><h3>CHÁ DE COZINHA</h3></a> */}
             <a className="btn listBtn" href='https://www.amazon.com.br/hz/wishlist/ls/3U1M9XRUA2T9G?ref_=wl_share' target='_blank'><img src={presente}/><h3>LISTA DE PRESENTES</h3></a>
           </span>
           <p>Fique à vontade!</p>
