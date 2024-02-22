@@ -32,6 +32,8 @@ const Main = styled.main`
       justify-content: center;
       align-items: center;
       width: 100%;
+      /* border: 1px red solid; */
+      height: 90px;
     }
     .mapsBtn{
       width: 30%;

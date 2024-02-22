@@ -9,12 +9,12 @@ const Span = styled.span`
   cursor: pointer;
 
   img{
-    height: 30px;
+    height: 36px;
     opacity: .7;
   }
   p{
     font-weight: 400;
-    font-size: min(10vw, 10px);
+    font-size: min(2.6vw, 12px);
     text-transform: uppercase;
   }
 `
